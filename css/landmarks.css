@@ -1,0 +1,680 @@
+
+/* MAPPING NESTED GRIDS FOR CONTENT AREAS: VIDEO, PHOTOS AND MAP*/
+
+/* CSS FOR NAVBAR AND SUBNAV BAR*/
+
+/* STYLES FOR 1024 AND LARGER*/
+body {
+    font-family: Arial serif;
+    font-size: 16px;
+    margin: 0;
+}
+.elements .menu , .subnav ul li{
+
+    font-size: 1.5rem;
+}
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "nav"
+        "main"
+        "footer"
+}
+
+
+/* CSS FOR NAVBAR AND SUBNAV BAR*/
+.nav {
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 1fr 250px 5fr;
+    grid-template-rows: 2fr 1fr;
+
+    background-color: #00283C;
+}
+.logo {
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+a .logo-img {
+    position: relative;
+    max-height: 134px;
+    display: block;
+}
+.elements {
+    display:grid;
+    grid-template-columns: 5% 1fr;
+    font-size: 24px;
+    grid-column: 3/4;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.element-children{
+    grid-column: 2/3;
+}
+.hamburger-menu {
+    display: none;
+}
+.subnav {
+    display: grid;
+    grid-template-columns: 1fr 250px 7% 5fr;
+    grid-column: 1/4;
+    background-color: black;
+    grid-row: 2;
+    border-top: 3px solid #9F895D;
+}
+.sub-elements {
+    grid-column: 4/5;
+    margin-top: auto;
+    margin-bottom: auto;
+    /*! margin-left: 25px; */
+}
+
+.sub-elements li {
+    padding-right: 30px;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+ul li {
+    display: inline;
+}
+ul li a {
+    color: #fff;
+    padding-right: 15px;
+}
+.menu{
+    padding-right: 30px;
+}
+.card {
+    width: 100%;
+}
+
+  /* CODE FOR HAMBURGER MENU HERE*/
+
+
+  .hamburger-menu {
+    color: white;  
+    display: none;
+    grid-column: 2/3;
+    justify-self: end;
+    align-self: center;
+}
+
+.menu__toggle {
+    border-radius: 3px;
+    display: block;     
+    margin-bottom: 0;
+
+
+}
+
+.menu__toggle .bar {
+    display: block;
+    margin-right: 20px;
+    width: 25px;
+    margin-bottom: 5px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+.on .one {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.on .two {
+    opacity: 0;
+}
+
+.on .three {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+/*HAMBURGER ENDS HERE */
+        /* CODE FOR NAVBAR ENDS HERE!!!!!*/
+
+/* STARTING THE CODE FOR THE MAIN SECTION HERE*/
+
+
+/* PARENT WRAPPER*/
+#main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+}
+
+/* CHILDREN ELEMENTS*/
+.title{
+    grid-column: 2/3;
+}
+.first-intro{
+    grid-column: 2/3;
+}
+.markers, .register-sites, .noteworthy-locations, .map{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 23%));
+    grid-column: 2/3;
+    grid-gap: 20px;
+    
+}
+.second-intro{
+    grid-column: 2/3;
+}
+.register-sites{
+    grid-column: 2/3;
+    
+}
+.third-intro{
+    grid-column: 2/3;;
+}
+.map{
+    grid-column: 2/3;
+}
+.fourth-intro{
+    grid-column: 2/3;
+}
+.noteworthy-locations{
+    grid-column: 2/3;
+}
+
+/*WRAPPER FOR THE CARDS, BOX SHADOW*/
+.walls-sign,
+.serenola,
+.quinn,
+.liberty,
+.shady-grove,
+.map-img,
+.pleasant,
+.map-card,
+.walls-building,
+.newnan{
+    box-shadow: 3px 3px 3px lightgrey;
+    border-radius: 10px;
+    transition: all .1;
+    overflow: hidden;
+}
+
+/* THE CODE FOR THE HOVER ON CARDS*/
+.walls-sign:hover{
+    transform: scale(1.1);
+}
+.serenola:hover{
+    transform: scale(1.1);
+}
+.quinn:hover{
+    transform: scale(1.1);
+}
+.liberty:hover{
+    transform: scale(1.1);
+}
+.shady-grove:hover{
+    transform: scale(1.1);
+}
+.pleasant:hover{
+    transform: scale(1.1);
+}
+.map-card:hover{
+    transform: scale(1.1);
+}
+.walls-building:hover{
+    transform: scale(1.1);
+}
+.newnan:hover{
+    transform: scale(1.1);
+}
+.map-img:hover{
+    transform: scale(1.1);
+}
+/*END OF HOVER ON THE CARDS*/
+
+
+
+
+
+
+/*
+footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    right:0;
+    left:0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    background-color:#252525;
+    color:white;
+    height:50px;
+    align-content: center;
+}
+
+.visit {
+    grid-column: 2/6;
+    margin: 0;
+    
+}
+
+.alachua-info{
+    font-size: 15px;
+    color:white;
+   
+}
+*/
+
+/*1024 AND LARGER STYLES END HERE*/
+
+@media screen and (max-width: 1210px){
+
+    .menu{
+        padding-right: 25px;
+    }
+    .sub-elements li{
+        padding-right: 25px;
+    }
+   
+}
+@media screen and (max-width: 1175px){
+
+    .menu{
+        padding-right: 15px;
+    }
+    .sub-elements li{
+        padding-right: 15px;
+    }
+    
+}
+@media screen and (max-width: 1115px){
+
+    .menu{
+        padding-right: 10px;
+    }
+    .sub-elements li{
+        padding-right: 10px;
+    }
+    .elements .menu , .subnav ul li{
+        font-size: 1.3rem;
+    }
+    
+
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+
+    a .logo-img {
+        /*! position: relative; */
+        width: 100%;
+        display: block;
+    }
+
+    .elements ul .menu {
+        grid-column: 3/4;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+  
+
+    .sub-elements {
+        grid-template-columns: repeat(auto-fill,minmax(80px,100px));
+        justify-content: center;
+        grid-column: 4/5;
+        margin-top: auto;
+        margin-bottom: auto;
+     
+        /*! margin-left: 25px; */
+    }
+
+    .sub-elements li{
+        justify-self: center;
+    }
+
+    .elements .menu , .subnav ul li{
+
+        font-size: 1.1rem;
+    }
+
+
+}
+
+@media screen and (max-width: 920px){
+    .elements .menu , .subnav ul li{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 880px){
+.menu a , .subnav ul li{
+    padding-right: 8px !important;
+}
+.sub-elements li{
+    padding-right: 8px;
+}
+}
+
+@media screen and (max-width: 840px){
+    .menu a , .subnav ul li{
+        padding: 5px !important;
+        font-size: .8rem;
+    }
+    .sub-elements li{
+        padding-right: 5px;
+    }
+#main{
+    grid-template-columns: 15% 1fr 15%;
+}
+    .markers{
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-gap: 25px;
+}
+.register-sites{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-gap: 25px;
+}
+
+ .noteworthy-locations {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-gap: 25px; 
+}
+.map{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-gap: 25px; 
+    
+}
+}
+
+@media screen and (max-width: 780px) {
+    
+
+
+    /* CSS FOR NAVBAR AND SUBNAV BAR*/
+    .nav {
+        grid-area: nav;
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: 2fr 1fr; 
+    grid-column: 1/4;
+        background-color: #00283C;
+    }
+
+    .logo {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+
+    .elements {
+        display: none;
+        font-size: 24px;
+        grid-column: 3/4;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    
+    .subnav {
+      display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-column: 1/4;
+        background-color: black;
+        grid-row: 2;
+        border-top: 3px solid #9F895D;
+
+    }
+
+    .sub-elements {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        justify-content: center;
+        grid-column: 1/4;
+        margin-top: auto;
+        margin-bottom: auto;
+       
+        /*! margin-left: 25px; */
+    }
+
+    .menu a , .subnav ul li{
+        padding: 8px !important;
+        font-size: 1.2rem;
+    }
+
+    .sub-elements li{
+        padding-right: 8px;
+    }
+    .hamburger-menu{
+        display:block;
+    }
+
+   
+
+#main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-column: 1/4;
+}
+
+.title{
+    grid-column: 2/3;
+}
+.first-intro{
+    grid-column: 2/3;
+}
+
+.second-intro{
+    grid-column: 2/3;
+}
+.register-sites{
+    grid-column: 2/3;
+}
+.third-intro{
+    grid-column: 2/3;;
+}
+.map{
+    grid-column: 2/3;
+}
+.fourth-intro{
+    grid-column: 2/3;
+}
+.noteworthy-locations{
+    grid-column: 2/3;
+}
+
+.markers{
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-gap: 25px;
+}
+.register-sites{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-gap: 25px;
+}
+
+ .noteworthy-locations {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-gap: 25px; 
+}
+.map{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-gap: 25px; 
+    
+}
+.walls-sign{
+    border: 2px solid blue;
+}
+
+}
+
+/* TABLET MEDIA QUERY */
+@media screen and (max-width: 720px) {
+ 
+    .menu a , .subnav ul li{
+        padding: 8px !important;
+        font-size: 1rem;
+    }
+    .sub-elements li{
+        padding-right: 8px;
+    }
+    .markers{
+        display: grid;
+        grid-template-columns: 45% 45%;
+    }
+     .noteworthy-locations, .map{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-column: 2/3;
+        grid-gap: 20px;
+        
+    }
+    .register-sites{
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-template: 50% 50%;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+   
+    /* CSS FOR NAVBAR AND SUBNAV BAR*/
+    .nav {
+        grid-area: nav;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr; 
+        grid-column: 1/4;
+        background-color: #00283C;
+    }
+
+    .logo {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+
+    
+    .subnav {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column: 1/4;
+        background-color: black;
+        grid-row: 2;
+        border-top: 3px solid #9F895D;
+
+    }
+    .markers, .register-sites, .noteworthy-locations, .map{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-column: 2/3;
+        grid-gap: 20px;
+        
+    }
+    #main{
+        grid-template-columns: 8% 1fr 8%;
+    }
+    .walls-sign:hover{
+        transform: scale(1);
+    }
+}
+
+
+
+
+/* video cards css starts here*/
+
+
+.resource {
+    width: 100%;
+}
+
+.shadow {
+
+    box-shadow: 3px 5px 6px #ccc;
+    width: 100%;
+}
+.shadow-text {
+    padding: 5px;
+}
+
+.shadow-text p {
+    text-align: center;
+    font-size: 14px;
+}
+.img-top{
+   width: 100%;
+}
+.bo-diddley {
+    box-shadow: 3px 5px 6px #ccc;
+    width: 100%;
+}
+
+.thumbnail {
+    width: 100%;
+}
+
+.dates {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+
+/*MAP SECTION*/
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: #252525;
+    color: white;
+    height: 50px;
+    align-content: center;
+    padding: 0 20%;
+}
+
+.alachua-info {
+    font-size: 15px;
+    color: white;
+}
+/*CSS FOR LIGHTBOX*/
+.lightbox {
+    /** Default lightbox to hidden */
+    display: none;
+    /** Position and style */
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox img {
+    /** Pad the lightbox image */
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 200px;
+    margin-bottom: auto;
+}
+
+.lightbox:target {
+    /** Remove default browser outline */
+    outline: none;
+
+    /** Unhide lightbox **/
+    display: block;
+}
