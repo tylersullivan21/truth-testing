@@ -7,8 +7,17 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/links.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/map.css" />
 
 </head>
+
+<style>
+    #map {
+      width: 100%;
+      height: 900px;
+      background-color: grey;
+    }
+  </style>
 
 <body>
 
@@ -56,7 +65,19 @@
      <div class="main-content">
         <div class="intro">
        
-        <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="700px" id="gmap_canvas" src="https://maps.google.com/maps?q=downtown%20gainesville&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.jetzt-drucken-lassen.de">www.jetzt-drucken-lassen.de</a></div><style>.mapouter{text-align:right;width: 100%;}.gmap_canvas {overflow:hidden;background:none!important;width: 100%;}</style></div>
+        <!-- <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="700px" id="gmap_canvas" src="https://maps.google.com/maps?q=downtown%20gainesville&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{text-align:right;width: 100%;}.gmap_canvas {overflow:hidden;background:none!important;width: 100%;}</style></div>-->
+
+        <div id="map"> </div>
+
+
+
+
+        <script src="js/map.js"></script>
+                <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRbdKmyFU_X9r-UVmsapYMcKDJQJmQpAg&callback=initMap">
+                </script>
+
+
 
     </section>
 

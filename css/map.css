@@ -394,3 +394,29 @@ footer {
 
 
 }
+
+
+
+
+/******************************************************************
+                    
+                        MAP CUSTOM STYLES
+
+******************************************************************/
+
+
+
+.marker-info{
+    display: grid;
+    grid-template-columns: 3% 55% 3% 35% 3%;
+}
+
+.marker-text{
+    grid-column: 2/3;
+}
+.marker-image{
+    grid-column: 4/5;
+}
+.marker-image img{
+    width:100%;
+}
